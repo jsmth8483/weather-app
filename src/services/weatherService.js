@@ -6,7 +6,7 @@ const weatherService = (function () {
 		);
 		const data = await currentWeather.json();
 		const processedData = processWeatherData(data);
-		console.log(processedData);
+		console.log(data);
 		return processedData;
 	}
 
