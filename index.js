@@ -5,7 +5,8 @@ const weatherService = (function () {
 			{ mode: 'cors' }
 		);
 		const data = await currentWeather.json();
-		console.log(data);
+		const processedData = processWeatherData(data);
+		console.log(processedData);
 		return data;
 	}
 
@@ -16,15 +17,21 @@ const weatherService = (function () {
 		);
 
 		const data = await currentWeather.json();
-		console.log(data);
-		return data;
+		const processedData = processWeatherData(data);
+		console.log(processedData);
+		return processedData;
+	}
+
+	function processWeatherData(data) {
+		const { weather } = data;
+		return weather;
 	}
 
 	return { getWeatherCityState, getWeatherZipCode };
 })();
 
-weatherService.getWeatherCityState('London').then((res) => {
+weatherService.getWeatherCityState('London').then((weather) => {
 	const img = document.createElement('img');
-	img.src = 'http://openweathermap.org/img/w/' + res.weather[0].icon + '.png';
+	img.src = 'http://openweathermap.org/img/w/' + weather[0].icon + '.png';
 	document.body.appendChild(img);
 });
