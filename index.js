@@ -7,7 +7,7 @@ const weatherService = (function () {
 		const data = await currentWeather.json();
 		const processedData = processWeatherData(data);
 		console.log(processedData);
-		return data;
+		return processedData;
 	}
 
 	async function getWeatherZipCode(zipCode) {
