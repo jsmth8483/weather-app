@@ -1,24 +1,27 @@
 {
-  "name": "weather-app",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jsmth8483/weather-app.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jsmth8483/weather-app/issues"
-  },
-  "homepage": "https://github.com/jsmth8483/weather-app#readme",
-  "devDependencies": {
-    "webpack": "^5.67.0",
-    "webpack-cli": "^4.9.1"
-  }
+	"name": "weather-app",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "webpack",
+		"watch": "webpack watch"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jsmth8483/weather-app.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/jsmth8483/weather-app/issues"
+	},
+	"homepage": "https://github.com/jsmth8483/weather-app#readme",
+	"devDependencies": {
+		"css-loader": "^6.5.1",
+		"style-loader": "^3.3.1",
+		"webpack": "^5.67.0",
+		"webpack-cli": "^4.9.1"
+	}
 }
