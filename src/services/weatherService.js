@@ -1,7 +1,7 @@
 const weatherService = (function () {
 	async function getWeatherCityState(city, state) {
 		const currentWeather = await fetch(
-			`https://api.openweathermap.org/data/2.5/weather?q=${city},${state}&appid=6aee3ae122dc51d88df6025540353b53`,
+			`https://api.openweathermap.org/data/2.5/weather?q=${city},${state}&units=imperial&appid=6aee3ae122dc51d88df6025540353b53`,
 			{ mode: 'cors' }
 		);
 		const data = await currentWeather.json();
@@ -23,8 +23,8 @@ const weatherService = (function () {
 	}
 
 	function processWeatherData(data) {
-		const { weather } = data;
-		return weather;
+		const { weather, name, sys, main, wind } = data;
+		return { weather, name, sys, main, wind };
 	}
 
 	return { getWeatherCityState, getWeatherZipCode };
